@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Random Numbers</title>
+    <script>
+    function getPassword()
+    {
+  console.log("hello");
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*';
+    var count = '';
+
+    var n = document.getElementById('input').value;
+
+    for(let i=0;i<n;i++){
+    var char = Math.floor(Math.random()*str.length+1);
+    count += str.charAt(char);
+    }
+
+    if(count.length==n)
+    {
+
+        document.getElementById('output').innerText = count;
+    }
+    else
+    {
+    getPassword();
+    }
+
+    console.log(count);
+    }
+  </script>
+    <style>
+        *
+        {
+          padding: 0;
+          box-sizing: border-box;
+          background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        body
+        {
+          margin-left: 250px;
+          height:450px;
+          width:50%;
+          justify-content: center;
+          align-items: center;
+          padding: 50px;
+          margin-top:200px;
+          border:2px solid black;
+          color:white;
+          border-radius:20px;
+        }
+        #btn,#input,#output
+        {
+        color:white;
+        border-radius:20px;
+        }
+        #output
+        {
+        padding-left:20px;
+        font-size:25px;
+        }
+        #input
+        {
+        padding:10px;
+        font-size:20px;
+        }
+        #btn
+        {
+        padding:10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Password Generator</h1>
+<p id="output" name="output"></p><br><br><br><br><br>
+<input type="text" id="input" name="input" />
+<p>(Please mention the digit count of password as you need (between 6 digits to 9 digits)).</p>
+<button onclick="getPassword()" id="btn"> Click to get Password </button>
+
+</body>
+</html>
+
+
+<!--function password(){
+
+
+  -->
+
+<!--    let b;
+    if(a==6)
+    {
+     b = 1000000;
+
+    let x = Math.floor((Math.random() * b) + 1);
+    document.getElementById("output").value = x;
+    }
+    else if(a==7)
+    {
+     b = 10000000;
+
+    let x = Math.floor((Math.random() * b) + 1);
+     document.getElementById("output").value = x;
+    }
+    else if(a==8)
+    {
+     b = 100000000;
+
+    let x = Math.floor((Math.random() * b) + 1);
+    document.getElementById("output").value = x;
+    }
+
+    else if(a==9)
+    {
+     b = 100000000;
+
+    let x = Math.floor((Math.random() * b) + 1);
+    document.getElementById("output").value = x;
+    }-->

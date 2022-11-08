@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic Operations with Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+         $("#button1").click(function(){
+          var a = parseInt($("#input1").val());
+            $("#output").val(a + parseInt($("#input2").val()));
+         });
+      });
+
+       $(document).ready(function(){
+         $("#button2").click(function(){
+          var a = $("#input1").val();
+            $("#output").val(a - $("#input2").val());
+         });
+      });
+
+        $(document).ready(function(){
+         $("#button3").click(function(){
+          var a = $("#input1").val();
+            $("#output").val(a * $("#input2").val());
+         });
+      });
+
+        $(document).ready(function(){
+         $("#button4").click(function(){
+          var a = $("#input1").val();
+            $("#output").val(a / $("#input2").val());
+         });
+      });
+
+    </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+
+</head>
+<body>
+<h1>Arithmetic operations</h1>
+<label> First Input  </label>
+<input type="text" id="input1" name="input1"/><br><br>
+<label> Second Input </label>
+<input type="text" id="input2" name="input2"/><br><br>
+<label> Output </label>
+<input type="text" id="output" name="output" value=" "/><br><br>
+
+
+<button id="button1">Add</button>
+<button id="button2">Sub</button>
+<button id="button3">Multiply</button>
+<button id="button4">Divide</button>
+</body>
+</html>

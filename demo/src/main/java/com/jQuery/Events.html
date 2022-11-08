@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+        $("#p1").click(function(){
+        alert("Click event");
+        });
+        });
+
+        $(document).ready(function()
+        {
+        $("#p2").dblclick(function(){
+        alert("Double Click event");
+        });
+        });
+
+        $(document).ready(function()
+        {
+        $("#p3").mouseenter(function(){
+        alert("Mouse Enter event");
+        });
+        });
+
+        $(document).ready(function()
+        {
+        $("#p4").mouseleave(function(){
+        alert("Mouse Leave event");
+        });
+        });
+
+        $(document).ready(function()
+        {
+        $("#p5").hover(function(){
+        alert("Hover event");
+        });
+        });
+        $(document).ready(function()
+        {
+        $("#p6").mouseup(function(){
+        alert("MouseUp event");
+        });
+        });
+
+    $(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+    </script>
+</head>
+<body>
+<p id="p1">This method is to explore usage of Jquery click event</p>
+
+<p id="p2">This method is to explore usage of Jquery double click event</p>
+
+<p id="p3">This method is to explore usage of Jquery mouse enter event</p>
+
+<p id="p4">This method is to explore usage of Jquery mouse leave event</p>
+
+<p id="p5">This method is to explore usage of Jquery hover event</p>
+
+<p id="p6">This method is to explore usage of Jquery mouse up event</p>
+
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+<p id="p7">This method is to explore usage of Jquery focus blur event</p>
+
+</body>
+</html>

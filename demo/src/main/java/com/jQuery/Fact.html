@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial of given Number</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function()
+    {
+    $("button").click(function()
+    {
+     var number = $("#input").val();
+		var output = 1;
+			for(i=number; i>0; i--){
+				output = output*i;
+		}
+		$("#output").val(output);
+    });
+    });
+    </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+</head>
+<body>
+<h4>Enter the number to find factorial</h4>
+<label> input </label>
+<input type="text" id="input" name="input"/><br><br>
+<label> Output </label>
+<input type="text" id="output" name="output" value=""/><br><br>
+<button>Find Factorial</button>
+</body>
+</html>
+
+<!--        -->

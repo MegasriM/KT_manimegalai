@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Manipulation</title>
+    <script>
+        const food = ["Idly","Pongal","Poori","Vada"];
+        function length()
+        {
+        var len = food.length;
+        document.getElementById("output").value = len ;
+        }
+
+
+        function lastElement()
+        {
+        let lastElement = food[food.length - 1];
+        document.getElementById("output").value =  lastElement;
+        }
+
+
+        function ArrToSentence()
+        {
+        let text = food;
+        document.getElementById("output").value = text.toString();
+        }
+
+        function pushNewOne(newFood)
+        {
+        let input = newFood;
+        food.push(input);
+         document.getElementById("output").value = food;
+        }
+
+        function replace()
+        {
+
+        const food = ["Idly","Pongal","Poori","Vada"];
+             let index = food.indexOf("Vada");
+             console.log(index);
+            if(index!=-1)
+            {
+             food[index] = "Medhuvada";
+             }
+            document.getElementById("output").value = food;
+        }
+
+
+         function newValue()
+         {
+         food.splice(3,0,"Masalvada");
+         document.getElementById("output").value = food;
+         }
+
+    </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+</head>
+<body>
+
+<label> Menu </label>
+<input type="text" id="input1" name="input1" value="Idly,Poori,Pongal,Vada"/> <br><br>
+<label> New One </label>
+<input type="text" id="input2" name="input2"/> <br><br>
+<label> Menu card </label>
+<textarea type="text" id="output" name="output" rows="2" cols="30" > </textarea><br><br>
+
+
+<button onclick="length()">Find Length </button><br><br>
+<button onclick="lastElement()">Print the last value</button><br><br>
+<button onclick="ArrToSentence()">Array to String</button><br><br>
+<button onclick="pushNewOne(document.getElementById('input2').value)">pushing new one </button><br><br>
+<button onclick="replace()">Replace </button><br><br>
+<button onclick="newValue()">insert new value</button><br><br>
+
+
+</body>
+</html>

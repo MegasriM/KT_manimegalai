@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TIME IN 24hrs</title>
+    <script type="text/javascript">
+    function DisplayCurrentTime() {
+        var date = new Date();
+        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+        let session = " AM";
+        if(hours>12){
+        session = " PM" ;
+        }
+        let time = hours + ":" + minutes + ":" + seconds+" "+session;
+        document.getElementById('clk').innerHTML = time;
+        setTimeout(DisplayCurrentTime, 1000);
+    }
+
+ </script>
+    <style>
+        *
+        {
+          margin-left: 150px;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body
+        {
+        margin-top:200px;
+        font-size:30px;
+        }
+        #clk
+        {
+        margin-left:300px;
+        }
+    </style>
+</head>
+<body onload="DisplayCurrentTime()">
+<h1>DIGITAL CLOCK</h1>
+<div id="clk" ></div>
+</body>
+</html>
+
+

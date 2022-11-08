@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EvenNotDuplicates</title>
+  <script>
+  var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,8,9,10,11,12,13,14];
+    function evenNotDuplicates()
+    {
+        var result = arr.filter((n) => n % 2 == 0)
+        document.getElementById('output').value =  result;
+
+      function getUnique(result)
+      {
+
+         let uniqueArr = [...new Set(result)];
+          document.getElementById('output').value = uniqueArr;
+
+       }
+    getUnique(result);
+    }
+  </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+</head>
+<body>
+
+<label>Given Value </label>
+<p>[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,8,9,10,11,12,13,14]</p>
+<label> Output </label>
+<input type="text" id="output" name="output"/><br><br>
+
+<button onclick="evenNotDuplicates()">EvenNotDuplicates </button><br><br>
+
+</body>
+</html>

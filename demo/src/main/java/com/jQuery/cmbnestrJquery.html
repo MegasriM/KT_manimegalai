@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String combining</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("button").click(function(){
+            var a = $("#input1").val();
+            $("#output").val(a + $("#input2").val());
+    });
+    });
+    </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+
+</head>
+<body>
+<label>Input String 1</label>
+<input type="text" id="input1" name="input1" value="" /><br><br>
+
+<label>Input String 2</label>
+<input type="text" id="input2" name="input2" value=""/><br><br>
+
+<label>Output String </label>
+<input type="text" id="output" name="output" value="" /><br><br>
+
+<button> combine the strings </button><br>
+</body>
+</html>

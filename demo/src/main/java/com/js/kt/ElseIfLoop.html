@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Else If Loop</title>
+    <script>
+    function  strfunc()
+    {
+    let n=20;
+    let op;
+        for(let i=1;i<=n;i++)
+        {
+        if((i%3==0)&&(i%5==0))
+        {
+        op = "Iam Worthy";
+      document.getElementById('output').innerText+= op;
+        }
+        else if(i%3==0)
+        {
+         op = "Iam";
+        document.getElementById('output').innerText+= op;
+        }
+         else if(i%5==0)
+        {
+         op = "Worthy";
+        document.getElementById('output').innerText+= op;
+        }
+        else
+        {
+         op = i;
+         document.getElementById('output').innerText+= op;
+        }
+        document.getElementById('output').innerText+="\n ";
+        }
+
+
+    }
+    </script>
+</head>
+<body>
+<p>Usage of else-if loop in javascript </p>
+<button id="id1" onclick="strfunc()"> string pattern</button>
+<p id="output" ></p>
+</body>
+</html>

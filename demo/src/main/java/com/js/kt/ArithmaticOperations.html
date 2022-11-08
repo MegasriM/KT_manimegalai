@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic operations</title>
+    <script>
+        function add()
+        {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        document.getElementById("output").value = a + b;
+        }
+        function sub()
+        {
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        document.getElementById("output").value = a-b;
+        }
+        function multiply()
+        {
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        document.getElementById("output").value = a*b;
+        }
+        function divide()
+        {
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        document.getElementById("output").value = a/b;
+        }
+    </script>
+    <style>
+        label
+        {
+          font-weight: bold;
+          display: block;
+        }
+        label:after
+        {
+         content: ": " }
+    </style>
+</head>
+<body>
+<h1>Arithmetic operations</h1>
+<label> First Value </label>
+<input type="text" id="input1" name="input1"/><br><br>
+<label> Second value </label>
+<input type="text" id="input2" name="input2"/><br><br>
+<label> Output </label>
+<input type="text" id="output" name="output" value=" "/><br><br>
+
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="multiply()">Multiply</button>
+<button onclick="divide()">Divide</button>
+</body>
+</html>

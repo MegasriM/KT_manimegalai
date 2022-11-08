@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patterns</title>
+    <script>
+    function strfunc()
+    {
+        var str = "abcdefghijklmnopqrstuvwxyz";
+       let count = 0;
+       for(let i=0;i<15;i++)
+       {
+           for(let j=0;j<6;j++)
+          {
+             if(i == 1||i==4||i==7||i==10||i==13)
+                {
+                 if(count<str.length)
+                 {
+                    document.getElementById('output').innerText+= str.charAt(count)+" ";
+                        count ++;
+                 }
+             }
+             else
+             {
+                   document.getElementById('output').innerText+= "- "+" ";
+             }
+           }
+              document.getElementById('output').innerText+="\n ";
+       }
+    }
+    </script>
+</head>
+<body>
+<button id="id1" onclick="strfunc()"> string pattern</button>
+<p id="output" ></p>
+</body>
+</html>

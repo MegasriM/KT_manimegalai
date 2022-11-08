@@ -1,0 +1,50 @@
+.head{
+    background-color: ;
+    text-align: center;
+    font-size: 30px;
+    color:#E6E6FA;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 15px;
+    border: 2px;
+}
+#tab{
+    border:2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:30px;
+    border-radius:30px;
+    padding:20px 20px;
+    box-shadow: 10px 10px 10px 10px;
+    background-color:#2B3856;
+}
+input[type="button"]
+{
+
+    width:100%;
+    color:#1e81b0;
+    padding: 20px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border:2px;
+    border-radius:30px;
+    cursor: pointer;
+}
+input[type="text"]
+{
+    padding:20px 30px;
+    font-size:20px;
+    font-weight: bold;
+    border:none;
+    border-radius: 20px;
+    border: 2px solid;
+}
+td:hover
+{
+    background-color:#C9C0BB;
+    border-radius: 30px;
+}
+.Id1
+{
+background:#77B5FE;
+}

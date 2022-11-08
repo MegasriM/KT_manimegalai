@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+
+            var output=document.getElementById('screen');
+
+            function updateTextBox(value)
+            {
+                output=document.getElementById('screen');
+                output.value+=value;
+            }
+            function result()
+            {
+                output.value=eval(output.value);
+            }
+            function percent()
+            {
+                var percent=output.value;
+                var res=percent/100;
+                output.value=res;
+            }
+            function backspace()
+            {
+                output.value=output.value.slice(0,1);
+            }
+
+            function Calculate(){
+                try{
+                    output.value=eval(output.value)
+                }
+                catch{
+                    alert("Invalid");
+                }
+            }
+        </script>
+  <link rel="stylesheet" href="Calculator.css">
+
+</head>
+<body>
+<form name="calculator">
+  <table id="tab">
+    <tr>
+      <td colspan="4" class="head">Calculator</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <input type="text" id="screen" name="Screen" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" name="7" value="7" onclick="updateTextBox(7)" />
+      </td>
+      <td>
+        <input type="button" name="8" value="8" onclick="updateTextBox(8)" />
+      </td>
+      <td>
+        <input type="button" name="9" value="9" onclick="updateTextBox(9)" />
+      </td>
+      <td>
+        <input class="Id1" type="button" name="-"  value="-" onclick="updateTextBox('-')" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" name="4"  value="4" onclick="updateTextBox(4)" />
+      </td>
+      <td>
+        <input type="button" name="5" value="5" onclick="updateTextBox(5)" />
+      </td>
+      <td>
+        <input type="button" name="6"  value="6" onclick="updateTextBox(6)" />
+      </td>
+      <td>
+        <input class="Id1" type="button" name="+"  value="+" onclick="updateTextBox('+')" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" name="1" value="1" onclick="updateTextBox(1)" />
+      </td>
+      <td>
+        <input type="button" name="2" value="2" onclick="updateTextBox(2)" />
+      </td>
+      <td>
+        <input type="button" name="3" value="3" onclick="updateTextBox(3)" />
+      </td>
+      <td>
+        <input class="Id1" type="button" name="/" value="/" onclick="updateTextBox('/')" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" name="."  value="." onclick="updateTextBox('.')" />
+      </td>
+      <td>
+        <input type="button" name="0" value="0" onclick="updateTextBox(0)" />
+      </td>
+      <td>
+        <input type="button" name="%" value="%"  onclick="updateTextBox(%)" />
+      </td>
+      <td>
+        <input class="Id1" type="button" name="*" value="*" onclick="updateTextBox('*')" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" name="RESET"  value="C" onclick="clear();" />
+      </td>
+      <td>
+        <input type="button" name="DEL" value="DEL" onclick="backspace();" />
+      </td>
+
+      <td colspan="2">
+        <input class="Id1" type="button" name="="  value="=" onclick="Calculate();" />
+      </td>
+
+    </tr>
+  </table>
+</form>
+</body>
+</html>
